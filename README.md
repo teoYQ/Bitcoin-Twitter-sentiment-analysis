@@ -15,7 +15,8 @@ Cleaning tweets
 
 
 Dropping useless columns to make csv files smaller and perform simple cleaning of tweets like urls, imgs, non alpha numeric and hashtags
-To be done : filter out ads as well
+Filtered ads through LDA and bag of words
+
 
 Sentiment Analysis
 
@@ -25,4 +26,6 @@ Using Vader and textblob, we performed sentiment analysis on all the tweets coll
 Preliminary Model
 
 
-Logistic Regression was used.
+Logistic Regression was used back when we were still using the 2017 dataset. After using the 2019 dataset and attempting multiple 
+models, we found that Logistic Regression with K-folds, K-nearest Neighbors and Random forest gave us a lowly accuracy of 53%.
+Hence, we decided to implement a neural net that would take in another feature, time. Using LSTM, we manage to bump this up to our current X grades
