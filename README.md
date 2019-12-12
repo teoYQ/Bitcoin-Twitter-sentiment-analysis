@@ -17,7 +17,7 @@ For our project we used tweets from 1st Jan 2019 to 30th October 2019
 
 
 Dropping useless columns to make csv files smaller and perform simple cleaning of tweets like urls, imgs, non alpha numeric and hashtags.
-Filtered ads through LDA and bag of words
+Filtered ads through LDA and bag of words. The visualizations can be found in the LDA folder, open each of the html to view the clusters. 
 
 
 ### Sentiment Analysis
@@ -28,6 +28,9 @@ Using Vader and textblob, we performed sentiment analysis on all the tweets coll
 
 Logistic Regression was used back when we were still using the 2017 dataset.  
 
+### Final Model
 After using the 2019 dataset and attempting multiple models, we found that Logistic Regression with K-folds, K-nearest Neighbors and Random forest gave us a lowly accuracy of 53%.
 Hence, we decided to implement a neural net that would take in all the features and also including a time series. Using a birectional LSTM model, we manage to bump this up to our current 77.8% accuracy.
+
+Refer to our report for more detailed analysis
 
